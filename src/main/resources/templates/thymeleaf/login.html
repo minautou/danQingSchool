@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title th:text="${PROJNAME}">数据中心系统</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no" />
+
+    <meta name="renderer" content="webkit" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="shortcut icon" href="#" />
+    <link rel="stylesheet" th:inline="text" th:href="@{/assets/css/login.css}" />
+    <style th:inline="text">
+        html, body {
+            height: 100%;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            position: relative;
+            overflow: hidden;
+            background:url('[[@{/assets/img/login-bg3.jpg}]]') no-repeat  center  #202845;
+        }
+    </style>
+</head>
+<body>
+<div class="login-wrap">
+    <div class="logo" style="background: none"></div>
+    <div class="mid">
+        <div class="loginBox">
+            <h1 id="tips" th:text="${msg}" style="font-size: 18px;color: #f00;text-align: center;font-weight: normal;">&nbsp;</h1>
+            <h1 id="tips" th:if="${msg} eq ''" style="font-size: 18px;color: #f00;text-align: center;font-weight: normal;">&nbsp;</h1>
+            <form id="form_form_login" th:action="@{/home}" method="POST">
+
+                <div class="row">
+                    <span><img th:src="@{/assets/images/user.png}" style="margin-top:10px;" /></span>
+                    <input id="user-name" type="text" name="username" placeholder="请输入用户名" />
+                </div>
+
+                <div class="row">
+                    <span><img th:src="@{/assets/images/password.png}" style="margin-top:10px;" /></span>
+                    <input id="user-pwd" type="password" name="password" placeholder="请输入密码" />
+                </div>
+                <div class="row" style="margin-top: 15px;height: 30px;">
+                    <label style="font-size: 14px;float: left;width: 40%;text-align: left;line-height: 30px;">记住密码</label>
+                    <input type="radio" id="cfca_n" name="cfca" checked="checked" style="width: 20px;height: 20px;float: inherit;vertical-align: middle;" />
+                    <label for="cfca_n" style="width: 30px;vertical-align: middle;text-align: left;">否</label>
+                    <input type="radio" id="cfca_y" name="cfca" style="width: 20px;height: 20px;float: inherit;vertical-align: middle;" />
+                    <label for="cfca_y" style="width: 30px;vertical-align: middle;text-align: left;">是</label>
+                </div>
+                <button type="submit" id="loginBtn">登 录</button>
+            </form>
+
+            <div class="boxFoot">
+                <div class="fr">
+                    <a href="#" class="aaa">忘记密码？</a>
+                    <a href="#" class="aaa">立即注册</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    Copyright©2019 四川丹青有限责任公司 All Rights Reserved 。版本：<span th:text="${versionNo}"></span>
+</div>
+</body>
+<script type="text/javascript" th:src="@{/assets/js/jquery.min.js}" src="../static/assets/js/jquery.min.js"/>
+<script type="text/javascript">
+    $(function () {
+        $("#loginBtn").click(function () {
+            alert(666);
+            $.post("/user_login",$("#loginForm").serialize(), function (data) {
+                if(data.code=="0"){
+                    window.location.href = "/index";
+                }else if(data.code=="1"){
+                    $("#tick").text(data.message).css("color", "red");
+                }
+            })
+        });
+    });
+</script>
+</html>

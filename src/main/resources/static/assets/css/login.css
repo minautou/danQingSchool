@@ -1,0 +1,245 @@
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    font-family: "Microsoft Yahei", "΢���ź�", "����", "����";
+    background-color: #0b4491;
+}
+
+.mid {
+    width: 832px;
+    height: 425px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    color: #3e8db9;
+    text-align: center;
+    width: 100%;
+    padding-bottom: 10px;
+    font-size: 14px;
+    margin-top: 10px;
+}
+.left-img{
+    float: left;
+    margin-left: -30px;
+    margin-top: 45px;
+}
+.logo {
+    background: url("../images/logo.png") no-repeat;
+    width: 500px;
+    height: 73px;
+    margin: 0 auto;
+    position: absolute;
+    top:-85px;
+    left: 0;
+    right: 0;
+
+}
+
+.loginBox {
+    width: 288px;
+    height: 324px;
+    margin-top: 60px;
+    float: right;
+}
+
+.login-wrap {
+    background: url("../img/login-wrap-bg.png") center no-repeat;
+    height: 425px;
+    position: relative;
+}
+
+.loginBox .title {
+    background-color: #347cde;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    text-shadow: 0 3px 0 #2b72d0;
+    height: 50px;
+    line-height: 50px;
+    color: #fff;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.loginBox form {
+    margin: 0px auto;
+    text-align: center;
+}
+
+.loginBox form table {
+    width: 100%;
+}
+
+.loginBox form table .yanzheng a {
+    color: #66758e;
+    cursor: pointer;
+}
+
+.loginBox form table .yanzheng a:hover {
+    text-decoration: underline;
+}
+
+.loginBox form table td {
+    padding: 8px 5px;
+    text-align: center;
+}
+
+.loginBox form label {
+    font-size: 16px;
+    width: 50px;
+    display: inline-block;
+    text-align: right;
+    color: #7d93b8;
+}
+
+.loginBox form input {
+    width: 238px;/*288-46-4*/
+    height: 36px;
+    float: left;
+    color: #fff;
+    border: 2px solid #0475dc;
+    background: transparent;
+    outline:none;
+    font-size: 14px;
+    padding: 0;
+    padding-left: 46px;
+    border-radius: 5px;
+
+}
+
+.loginBox form ::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: #8f9fb8;
+}
+
+.loginBox form :-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #8f9fb8;
+    opacity: 1;
+}
+
+.loginBox form ::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #8f9fb8;
+    opacity: 1;
+}
+
+.loginBox form :-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: #8f9fb8;
+}
+
+.loginBox form button {
+    border: none;
+    width: 289px;
+    height: 42px;
+    font-size: 16px;
+    color: #fff;
+    font-weight: bold;
+    background: url('../images/btn-normal.png') transparent;
+    margin: 10px auto;
+    cursor: pointer;
+}
+.loginBox form button:hover{
+    background-image: url('../images/btn-active.png');
+}
+
+.loginBox form button:hover {
+    background-color: #63ae45;
+}
+
+.loginBox form .row {
+    width: 100%;
+    height: 36px;
+    margin: 0;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.loginBox form .row span {
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    height: 36px;
+    width: 36px;
+    background-color: #2e3b5d;
+    border-right: 2px solid #0475dc;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+
+}
+
+.loginBox form .row span.user {
+
+}
+
+.loginBox .boxFoot {
+    /*background-color: #f2f7fb;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    height: 50px;*/
+    position: relative;
+}
+
+.loginBox .boxFoot .qudong {
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    border: 1px solid #3e98f6;
+    border-radius: 6px;
+    display: inline-block;
+    height: 30px;
+    color: #3e98f6;
+    font-size: 14px;
+    text-decoration: none;
+    margin-right: 20px;
+    padding: 0 8px;
+}
+
+.loginBox .boxFoot .qudong .icon {
+    margin-top: 3px;
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    background: url("../images/xitong.png") no-repeat;
+}
+
+.loginBox .boxFoot .qudong .text {
+    margin-left: 5px;
+    display: inline-block;
+    float: right;
+    line-height: 30px;
+}
+
+.loginBox .boxFoot .qudong .text:hover {
+    text-decoration: underline;
+}
+
+.loginBox .boxFoot .fr {
+    position: absolute;
+    right: 0;
+    top: 10px;
+    height: 32px;
+    width: 100%;
+    text-align: right;
+}
+
+.loginBox .boxFoot .fr a {
+    line-height: 32px;
+    color: #eeeefa;
+    font-size: 14px;
+    text-decoration: none;
+    margin-right: 20px;
+
+}
+
+.loginBox .boxFoot .fr a:hover {
+    text-decoration: underline;
+    color: #3e98f6;
+}

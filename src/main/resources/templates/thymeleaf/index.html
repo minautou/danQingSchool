@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>hello</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Product list</h1>
+
+  <table>
+
+        <tr>
+
+          <th>NAME</th>
+
+          <th>PRICE</th>
+
+          <th>IN STOCK</th>
+
+        </tr>
+    <tr th:each="prod : ${userList}">
+
+              <td th:text="${prod.userid}">Onions</td>
+
+              <td th:text="${prod.username}">2.41</td>
+
+              <td th:text="${prod.nickname}">yes</td>
+
+            </tr>
+
+      </table>
+</body>
+</html>

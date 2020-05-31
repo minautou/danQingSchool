@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<!--namespace 路径 指向dao层接口-->
+<mapper namespace="com.boot.danqing.dao.UserMapper" >
+    <sql id="Base_Column_List" >
+  id,userid,username,nickname,password,authority,createtime,modifytime
+  </sql>
+
+    <!--resultType 指向entity中对应的实体-->
+    <select id="getAlluser" parameterType="map" resultType="com.boot.danqing.entity.User">
+        select  <include refid="Base_Column_List"></include>
+        from user
+    </select>
+
+</mapper>

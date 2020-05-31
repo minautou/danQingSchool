@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<!--namespace 路径 指向dao层接口-->
+<mapper namespace="com.boot.danqing.dao.TeacherMapper" >
+    <sql id="Base_Column_List2" >
+    id,jointime,teacherid,teachername,teachernickname,sex,idcard,address,`degree`,graduateschool,isfulltime,iseffect,graduatetime,createtime,modifytime
+  </sql>
+
+    <!--resultType 指向entity中对应的实体-->
+    <select id="getAllTeacher" parameterType="map" resultType="com.boot.danqing.entity.Teacher">
+        select  <include refid="Base_Column_List2"></include>
+        from teacher
+    </select>
+
+    <select id="getPageTeacher" parameterType="Integer" resultType="com.boot.danqing.entity.Teacher">
+        select  <include refid="Base_Column_List2"></include>
+        from teacher limit #{param1},#{param2}
+    </select>
+
+</mapper>
